@@ -9,7 +9,7 @@ public class CalcTest1 {
     @Test
     public void plus() {
         mcalc = new calc();
-        assertEquals(3, mcalc.plus(2,1),0 );  //Added plus test code
+        assertEquals(4, mcalc.plus(3,1),0 );  //Added plus test code
 
     }
 
