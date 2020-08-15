@@ -11,7 +11,6 @@ sonarqube {
         // property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.host.url", "https://sonarcloud.io"
         //property "sonar.login", $SONAR_TOKEN
-
     }
 }
 
@@ -68,6 +67,7 @@ dependencies {
 }
 
 apply from: 'jacoco.gradle'
+
 
 
 
