@@ -3,7 +3,6 @@ plugins {
 }
 
 
-
 sonarqube {
     properties {
         property "sonar.projectKey", "halsuguro_simple_unit2_mvc"
