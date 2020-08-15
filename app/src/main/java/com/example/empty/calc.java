@@ -5,6 +5,11 @@ public class calc {
         int c = a + b;
         return c;
     }
+    public int plus2(int a, int b) {
+        int c = a + b;
+        return c;
+    }
+
     public int div(int a, int b){
         if (b == 0){
             return 0;
@@ -14,4 +19,5 @@ public class calc {
             return c;
         }
     }
+
 }
