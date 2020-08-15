@@ -1,43 +1,17 @@
 version: 2.1
+
 jobs:
   build:
-    working_directory: ~/code
     docker:
-      - image: circleci/android:api-28
-    resource_class: medium
-    environment:
-      JVM_OPTS: -Xmx5000m
+      - image: 'circleci/openjdk:11-jdk'
     steps:
       - checkout
-
-      - run: sdkmanager --licenses
-      - run: yes | sdkmanager --update || exit 0
       - run:
-          command: ./gradlew androidDependencies
-          when: always
+          name: Analyze on SonarCloud
+          command: gradle build sonarqube"
 
-
-      - run:
-          name: Build apk
-          command: |
-            ./gradlew :app:assembleDebug
-            ./gradlew :app:assembleDebugAndroidTest
-      - store_artifacts:
-          path: ./app/build/outputs/apk/debug/app-debug.apk
-          destination: /apks/app-debug.apk
-
-      #sonar cloud
-      build:
-        docker:
-          - image: 'circleci/openjdk:11-jdk'
-        steps:
-          - checkout
-          - run:
-              name: Analyze on SonarCloud
-              command: gradle build sonarqube"
-
-      workflows:
-        main:
-          jobs:
-            - build:
-                context: SonarCloud
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
