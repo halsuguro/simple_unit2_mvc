@@ -41,8 +41,4 @@ jobs:
           path: ./app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
           destination: /apks/app-debug-androidTest.apkreports/jacoco
 
-      #sonar cloud
-      - run:
-          name: Analyze on SonarCloud
-          command: gradle build sonarqube
 
