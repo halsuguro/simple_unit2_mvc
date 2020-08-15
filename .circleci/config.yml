@@ -12,12 +12,12 @@ jobs:
 
       - run:
           name: Analyze on SonarCloud
-          command: ./gradlew build sonarqube
+          command: ./gradlew build sonarqube"
 
-          workflows:
-            main:
-              jobs:
-                - build:
-                    context: SonarCloud
+workflows:
+    main:
+      jobs:
+      - build:
+        context: SonarCloud
 
-   
+
