@@ -15,10 +15,6 @@ jobs:
           command: ./gradlew build sonarqube
 
 
-workflows:
-    main:
-      jobs:
-      - build:
-        context: SonarCloud
+
 
 
