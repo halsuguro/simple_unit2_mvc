@@ -4,13 +4,9 @@ jobs:
     working_directory: ~/code
     docker:
       - image: circleci/android:api-28
-    resource_class: medium
-    environment:
-      JVM_OPTS: -Xmx5000m
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
     steps:
       - checkout
-
       - run:
           name: Analyze on SonarCloud
           command: ./gradlew build sonarqube
