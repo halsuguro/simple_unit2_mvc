@@ -8,8 +8,8 @@ sonarqube {
         property "sonar.organization", "halsuguro"
         // property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.login", "juichi39.test@gmail.com"
-        property "sonar.password", "gaoqiao#1"
+        property "sonar.login", token
+        //property "sonar.password", "gaoqiao#1"
     }
 }
 
