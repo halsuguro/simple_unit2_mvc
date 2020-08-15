@@ -1,16 +1,4 @@
 
-plugins {
-    id "org.sonarqube" version "3.0"
-}
-
-sonarqube {
-    properties {
-        property "sonar.projectKey", "halsuguro_simple_unit2_sonar_only"
-        property "sonar.organization", "halsuguro"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
-}
-
 buildscript {
     repositories {
         google()
