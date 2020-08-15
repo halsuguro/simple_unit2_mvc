@@ -14,6 +14,10 @@ public class calc {
         if (b == 0){
             return 0;
         }
+        if (a >= 999 ){
+            return 0;
+        }
+            
         else {
             int c = a / b;
             return c;
