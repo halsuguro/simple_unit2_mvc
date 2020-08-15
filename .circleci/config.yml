@@ -7,6 +7,12 @@ jobs:
       #- image: 'circleci/openjdk:11-jdk'
     steps:
       - checkout
+      - run: sdkmanager --licenses
+      - run: yes | sdkmanager --update || exit 0
+      - run:
+          command: ./gradlew androidDependencies
+          when: always
+
 
       - run:
           name: Analyze on SonarCloud
