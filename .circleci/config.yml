@@ -19,16 +19,8 @@ jobs:
       - run:
           command: ./gradlew androidDependencies
           when: always
-      #- save_cache:
-      #    paths:
-      #      - ~/.gradle
-      #    key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Run Unit Tests
-          command: ./gradlew clean lint test jacocoTestReport
-      - store_artifacts:
-          path: app/build
-          destination: reports
+
+
       - run:
           name: Build apk
           command: |
@@ -44,5 +36,5 @@ jobs:
       #sonar cloud
       - run:
           name: Analyze on SonarCloud
-          command: gradle build sonarqube
+          command: ./gradlew build sonarqube
 
