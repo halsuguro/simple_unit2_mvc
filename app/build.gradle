@@ -8,7 +8,7 @@ sonarqube {
         property "sonar.organization", "halsuguro"
         // property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.login", "sample_sonar_context"
+        property "sonar.login", "56b8bd995a4f9389d2092cf2bce5498b11e8d5bf"
         property "sonar.password", ""
     }
 }
