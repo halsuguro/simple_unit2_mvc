@@ -6,6 +6,10 @@ public class calc {
         return c;
     }
     public int plus2(int a, int b) {
+        int iSide = 0;
+        int iSide = 0;
+        int iSide = 0;
+
         int c = a + b;
         return c;
     }
