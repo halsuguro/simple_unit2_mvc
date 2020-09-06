@@ -10,6 +10,8 @@ public class calc {
         int iSide = 0;
         int iSide = 0;
 
+        
+
         int c = a + b;
         return c;
     }
